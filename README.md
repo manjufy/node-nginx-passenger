@@ -1,9 +1,9 @@
-# Passenger + Nginx + NodeJs
+# Passenger + Nginx + NodeJs - _Work In Progress_
 
 ## Build Image
 
 ```
-docker image build -t passenger-nginx-node:1.0 .
+docker image build -t phusion/passenger-nodejs:latest .
 ```
 
 ## Run Container

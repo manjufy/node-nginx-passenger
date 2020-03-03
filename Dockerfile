@@ -17,7 +17,7 @@ ADD webapp.conf /etc/nginx/sites-enabled/webapp.conf
 RUN mkdir /home/app/webapp
 
 # ...put your own build instructions here...
-COPY package.json /home/app/webapp
+COPY ./package.json /home/app/webapp
 COPY --chown=app:app . /home/app/webap
 RUN npm install
 EXPOSE 3000
