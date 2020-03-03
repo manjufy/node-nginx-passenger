@@ -16,9 +16,13 @@ RUN rm /etc/nginx/sites-enabled/default
 ADD webapp.conf /etc/nginx/sites-enabled/webapp.conf
 RUN mkdir /home/app/webapp
 
+# Set the working directory
+WORKDIR /home/app/webapp
+
 # ...put your own build instructions here...
-COPY ./package.json /home/app/webapp
-COPY --chown=app:app . /home/app/webap
+COPY package.json .
+COPY package-lock.json .
+COPY --chown=app:app . .
 RUN npm install
 EXPOSE 3000
 CMD [ "npm", "start" ]
