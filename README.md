@@ -27,3 +27,7 @@ docker images -a // LIST
 docker rm $(docker ps -a -f status=exited -q) // Remove a container upon exit
 docker system prune
 ```
+
+## References
+
+https://github.com/phusion/passenger-docker
